@@ -1,0 +1,21 @@
+ Test Plan for Real-Time Sensor Updates & Alerts Panel
+
+ 1. Verify real-time sensor data updates via WebSocket
+- Type: Functional / Integration
+- Automatable: Yes 
+
+ 2. Validate error alert displayed when WebSocket disconnects
+- Type: Integration / Negative
+- Automatable: Yes
+
+3. Verify clicking alert expands full details modal
+- Type: UI
+- Automatable: Yes
+
+4. Verify vessel warning are displayed correctly
+- Type: UI
+- Automatable: Yes
+
+5. Verify low battery notifications are displayed when battery is around a low value
+- Type: UI
+- Automatable: Yes
