@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RekiSe Marine Dashboard</title>
+    <style>
+        .vessel-card { border: 1px solid #ccc; padding: 10px; margin: 10px; width: 200px; display: inline-block; }
+        .modal { display: none; position: fixed; top: 20%; left: 30%; width: 40%; padding: 20px; background-color: #fff; border: 2px solid #000; }
+    </style>
+    <script>
+        function openModal(vesselId) {
+            document.getElementById('modal-' + vesselId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Vessel Dashboard</h1>
+
+    <!-- Vessel Cards -->
+    <div id="vessel-cards">
+        <div class="vessel-card" id="vessel1">
+            <span class="name">AquaOne</span><br>
+            <span class="status">Online</span><br>
+            <span class="battery">78%</span><br>
+            <span class="location">12.97,77.59</span><br>
+            <button onclick="openModal('1')">Details</button>
+        </div>
+
+        <div class="vessel-card" id="vessel2">
+            <span class="name">MarineX</span><br>
+            <span class="status">Offline</span><br>
+            <span class="battery">0%</span><br>
+            <span class="location">13.01,77.60</span><br>
+            <button onclick="openModal('2')">Details</button>
+        </div>
+
+        <div class="vessel-card" id="vessel3">
+            <span class="name">SeaExplorer</span><br>
+            <span class="status">Online</span><br>
+            <span class="battery">56%</span><br>
+            <span class="location">12.95,77.58</span><br>
+            <button onclick="openModal('3')">Details</button>
+        </div>
+    </div>
+
+    <!-- Modal for Vessel Details -->
+    <div class="modal" id="modal-1">
+        <span class="mission-name">Survey Mission Alpha</span><br>
+        <div class="subsystem propulsion">Propulsion: OK</div>
+        <div class="subsystem battery">Battery: OK</div>
+    </div>
+
+    <div class="modal" id="modal-2">
+        <span class="mission-name">Return to Base</span><br>
+        <div class="subsystem propulsion">Propulsion: OFF</div>
+        <div class="subsystem battery">Battery: Empty</div>
+    </div>
+
+    <div class="modal" id="modal-3">
+        <span class="mission-name">Mapping Mission Beta</span><br>
+        <div class="subsystem propulsion">Propulsion: OK</div>
+        <div class="subsystem battery">Battery: 56%</div>
+    </div>
+
+</body>
+</html>
